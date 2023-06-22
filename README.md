@@ -26,5 +26,5 @@ Contributions to this project are welcome! Please fork the project and create a 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Apache-2.0 license.
 
