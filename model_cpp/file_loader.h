@@ -1,6 +1,5 @@
 #ifndef FILE_LOADER_H
 #define FILE_LOADER_H
-
 #include <string>
 
 template <typename T>
