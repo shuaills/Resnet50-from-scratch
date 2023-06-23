@@ -1,13 +1,9 @@
 #ifndef CONV_LAYERS_H
 #define CONV_LAYERS_H
 
-#include <cmath>
-#include <cstdint>
-#include "debug.h"
-
 
 // Convolutional 2D layer function
-static float* my_conv2d(float* img,
+float* my_conv2d(float* img,
                         float* weight,
                         int hi,
                         int wi,
@@ -21,16 +17,16 @@ static float* my_conv2d(float* img,
                         bool is_free_img = true);
 
 // Fully connected layer function
-static float* my_fc(float* img, float* weight, float* bias);
+float* my_fc(float* img, float* weight, float* bias);
 
 // Max pooling layer function
-static float* my_max_pool(float* img);
+float* my_max_pool(float* img);
 
 // Average pooling layer function
-static float* my_avg_pool(float* img);
+float* my_avg_pool(float* img);
 
 // Batch normalization layer function
-static float* my_bn(float* img, 
+float* my_bn(float* img, 
                     float* mean, 
                     float* var, 
                     float* gamma, 
@@ -40,6 +36,6 @@ static float* my_bn(float* img,
                     int c);
 
 // Relu activation function
-static float* compute_relu_layer(float* img, int len);
+float* compute_relu_layer(float* img, int len);
 
 #endif // CONV_LAYERS_H

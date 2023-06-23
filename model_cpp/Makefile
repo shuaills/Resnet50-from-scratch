@@ -117,41 +117,113 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named helloWorld
+# Target rules for targets named model_cpp
 
 # Build rule for target.
-helloWorld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 helloWorld
-.PHONY : helloWorld
+model_cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 model_cpp
+.PHONY : model_cpp
 
 # fast build rule for target.
-helloWorld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/build
-.PHONY : helloWorld/fast
+model_cpp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/build
+.PHONY : model_cpp/fast
 
-helloWorld.o: helloWorld.cpp.o
-.PHONY : helloWorld.o
+conv_layers.o: conv_layers.cpp.o
+.PHONY : conv_layers.o
 
 # target to build an object file
-helloWorld.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/helloWorld.cpp.o
-.PHONY : helloWorld.cpp.o
+conv_layers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/conv_layers.cpp.o
+.PHONY : conv_layers.cpp.o
 
-helloWorld.i: helloWorld.cpp.i
-.PHONY : helloWorld.i
+conv_layers.i: conv_layers.cpp.i
+.PHONY : conv_layers.i
 
 # target to preprocess a source file
-helloWorld.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/helloWorld.cpp.i
-.PHONY : helloWorld.cpp.i
+conv_layers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/conv_layers.cpp.i
+.PHONY : conv_layers.cpp.i
 
-helloWorld.s: helloWorld.cpp.s
-.PHONY : helloWorld.s
+conv_layers.s: conv_layers.cpp.s
+.PHONY : conv_layers.s
 
 # target to generate assembly for a file
-helloWorld.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/helloWorld.cpp.s
-.PHONY : helloWorld.cpp.s
+conv_layers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/conv_layers.cpp.s
+.PHONY : conv_layers.cpp.s
+
+file_loader.o: file_loader.cpp.o
+.PHONY : file_loader.o
+
+# target to build an object file
+file_loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/file_loader.cpp.o
+.PHONY : file_loader.cpp.o
+
+file_loader.i: file_loader.cpp.i
+.PHONY : file_loader.i
+
+# target to preprocess a source file
+file_loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/file_loader.cpp.i
+.PHONY : file_loader.cpp.i
+
+file_loader.s: file_loader.cpp.s
+.PHONY : file_loader.s
+
+# target to generate assembly for a file
+file_loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/file_loader.cpp.s
+.PHONY : file_loader.cpp.s
+
+layer_computer.o: layer_computer.cpp.o
+.PHONY : layer_computer.o
+
+# target to build an object file
+layer_computer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/layer_computer.cpp.o
+.PHONY : layer_computer.cpp.o
+
+layer_computer.i: layer_computer.cpp.i
+.PHONY : layer_computer.i
+
+# target to preprocess a source file
+layer_computer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/layer_computer.cpp.i
+.PHONY : layer_computer.cpp.i
+
+layer_computer.s: layer_computer.cpp.s
+.PHONY : layer_computer.s
+
+# target to generate assembly for a file
+layer_computer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/layer_computer.cpp.s
+.PHONY : layer_computer.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -161,10 +233,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... helloWorld"
-	@echo "... helloWorld.o"
-	@echo "... helloWorld.i"
-	@echo "... helloWorld.s"
+	@echo "... model_cpp"
+	@echo "... conv_layers.o"
+	@echo "... conv_layers.i"
+	@echo "... conv_layers.s"
+	@echo "... file_loader.o"
+	@echo "... file_loader.i"
+	@echo "... file_loader.s"
+	@echo "... layer_computer.o"
+	@echo "... layer_computer.i"
+	@echo "... layer_computer.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

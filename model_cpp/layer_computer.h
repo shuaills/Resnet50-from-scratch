@@ -1,5 +1,7 @@
 #ifndef LAYER_COMPUTER_H
 #define LAYER_COMPUTER_H
+#include <string>
+
 
 float* compute_conv_layer(float* img, int hi, int wi, int& ho, int& wo, int& co, const std::string& layer_name, bool is_free_img = true);
 

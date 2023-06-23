@@ -8,7 +8,7 @@
 
 
 
-static float* my_conv2d(float* img,
+float* my_conv2d(float* img,
                         float* weight,
                         int hi,
                         int wi,
@@ -19,7 +19,7 @@ static float* my_conv2d(float* img,
                         int kernel,
                         int stride,
                         int pad,
-                        bool is_free_img = true) {
+                        bool is_free_img) {
 #if DEBUG_SHOW
   printf("conv in: (%d, %d, %d)\n", hi, wi, ci);
 #endif
@@ -64,7 +64,7 @@ static float* my_conv2d(float* img,
   return out;
 }
 
-static float* my_fc(float* img, float* weight, float* bias) {
+float* my_fc(float* img, float* weight, float* bias) {
 #if DEBUG_SHOW
   printf("fc in: (1000, 2048)\n");
   printf("fc out: (1000)\n");
@@ -85,7 +85,7 @@ static float* my_fc(float* img, float* weight, float* bias) {
   return out;
 }
 
-static float* my_max_pool(float* img) {
+float* my_max_pool(float* img) {
   auto hi = 112;
   auto wi = 112;
   auto channel = 64;
@@ -128,7 +128,7 @@ static float* my_max_pool(float* img) {
   return out;
 }
 
-static float* my_avg_pool(float* img) {
+float* my_avg_pool(float* img) {
   auto hi = 7;
   auto wi = 7;
   auto channel = 2048;
@@ -171,7 +171,7 @@ static float* my_avg_pool(float* img) {
   return out;
 }
 
-static float* my_bn(
+float* my_bn(
     float* img, float* mean, float* var, float* gamma, float* bias, int h, int w, int c) {
 #if DEBUG_SHOW
   printf("bn in : (%d, %d, %d)\n", h, w, c);
@@ -201,7 +201,7 @@ static float* my_bn(
   return out;
 }
 
-static float* compute_relu_layer(float* img, int len) {
+float* compute_relu_layer(float* img, int len) {
 #if DEBUG_SHOW
   printf("-- compute relu with %d\n", len);
 #endif

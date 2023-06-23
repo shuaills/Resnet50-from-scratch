@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/shuai/MyResnet50/model_cpp
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/helloWorld.dir/all
+all: CMakeFiles/model_cpp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/helloWorld.dir/clean
+clean: CMakeFiles/model_cpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/helloWorld.dir
+# Target rules for target CMakeFiles/model_cpp.dir
 
 # All Build rule for target.
-CMakeFiles/helloWorld.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shuai/MyResnet50/model_cpp/CMakeFiles --progress-num=1,2 "Built target helloWorld"
-.PHONY : CMakeFiles/helloWorld.dir/all
+CMakeFiles/model_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shuai/MyResnet50/model_cpp/CMakeFiles --progress-num=1,2,3,4,5 "Built target model_cpp"
+.PHONY : CMakeFiles/model_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/helloWorld.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shuai/MyResnet50/model_cpp/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/helloWorld.dir/all
+CMakeFiles/model_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shuai/MyResnet50/model_cpp/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/model_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shuai/MyResnet50/model_cpp/CMakeFiles 0
-.PHONY : CMakeFiles/helloWorld.dir/rule
+.PHONY : CMakeFiles/model_cpp.dir/rule
 
 # Convenience name for target.
-helloWorld: CMakeFiles/helloWorld.dir/rule
-.PHONY : helloWorld
+model_cpp: CMakeFiles/model_cpp.dir/rule
+.PHONY : model_cpp
 
 # clean rule for target.
-CMakeFiles/helloWorld.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/helloWorld.dir/build.make CMakeFiles/helloWorld.dir/clean
-.PHONY : CMakeFiles/helloWorld.dir/clean
+CMakeFiles/model_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/model_cpp.dir/build.make CMakeFiles/model_cpp.dir/clean
+.PHONY : CMakeFiles/model_cpp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

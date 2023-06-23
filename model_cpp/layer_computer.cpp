@@ -7,14 +7,14 @@
 
 
 
-static float* compute_conv_layer(float* img,
+float* compute_conv_layer(float* img,
                                  int hi,
                                  int wi,
                                  int& ho,
                                  int& wo,
                                  int& co,
                                  const std::string& layer_name,
-                                 bool is_free_img = true) {
+                                 bool is_free_img) {
 #if DEBUG_SHOW
   std::cout << "-- compute " << layer_name << std::endl;
 #endif
@@ -29,7 +29,7 @@ static float* compute_conv_layer(float* img,
   return my_conv2d(img, weight, hi, wi, ho, wo, ci, co, kernel, stride, pad, is_free_img);
 }
 
-static float* compute_fc_layer(float* img, const std::string& layer_name) {
+float* compute_fc_layer(float* img, const std::string& layer_name) {
 #if DEBUG_SHOW
   std::cout << "-- compute " << layer_name << std::endl;
 #endif
@@ -40,7 +40,7 @@ static float* compute_fc_layer(float* img, const std::string& layer_name) {
   return my_fc(img, weight, bias);
 }
 
-static float* compute_bn_layer(float* in_data, int h, int w, int c, const std::string& layer_name) {
+float* compute_bn_layer(float* in_data, int h, int w, int c, const std::string& layer_name) {
 #if DEBUG_SHOW
   std::cout << "-- compute " << layer_name << std::endl;
 #endif
@@ -55,21 +55,21 @@ static float* compute_bn_layer(float* in_data, int h, int w, int c, const std::s
   return my_bn(in_data, mean, var, gamma, bias, h, w, c);
 }
 
-static float* compute_maxpool_layer(float* in_data) {
+float* compute_maxpool_layer(float* in_data) {
 #if DEBUG_SHOW
   std::cout << "-- compute maxpool" << std::endl;
 #endif
   return my_max_pool(in_data);
 }
 
-static float* compute_avgpool_layer(float* in_data) {
+float* compute_avgpool_layer(float* in_data) {
 #if DEBUG_SHOW
   std::cout << "-- compute avgpool" << std::endl;
 #endif
   return my_avg_pool(in_data);
 }
 
-static float* compute_bottleneck(float* in_data,
+float* compute_bottleneck(float* in_data,
                                  int hi,
                                  int wi,
                                  int& ho,

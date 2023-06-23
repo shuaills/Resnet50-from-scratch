@@ -15,12 +15,12 @@ T* load_data_from_file(const std::string& file_name, int len, bool is_float) {
   return data;
 }
 
-static float* load_conv_weight(const std::string& name, int len) {
+ float* load_conv_weight(const std::string& name, int len) {
   auto file_name = "../model/resnet50_weight/resnet50_" + name + "_weight.txt";
   return load_data_from_file<float>(file_name, len, true);
 }
 
-static int* load_conv_param(const std::string& name, int len) {
+ int* load_conv_param(const std::string& name, int len) {
   auto file_name = "../model/resnet50_weight/resnet50_" + name + "_param.txt";
   return load_data_from_file<int>(file_name, len, false);
 }
