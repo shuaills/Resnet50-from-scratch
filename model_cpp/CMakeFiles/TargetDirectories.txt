@@ -1,3 +1,0 @@
-/home/shuai/MyResnet50/model_cpp/CMakeFiles/model_cpp.dir
-/home/shuai/MyResnet50/model_cpp/CMakeFiles/edit_cache.dir
-/home/shuai/MyResnet50/model_cpp/CMakeFiles/rebuild_cache.dir
