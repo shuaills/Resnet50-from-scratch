@@ -1,11 +1,15 @@
-# Ignore all build files
-/build/
-
-# Ignore all object files
+# Ignore object files
 *.o
+*.obj
 
-# Ignore all executable files
+# Ignore library files
+*.a
+*.lib
+
+# Ignore binary files
 *
+
+# But don't ignore these file types
 !*.cpp
 !*.h
 !*.hpp
@@ -14,3 +18,17 @@
 !CMakeLists.txt
 !*.md
 !*.txt
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore build directories
+build/
+bin/
+cmake-build-debug/
+cmake-build-release/
