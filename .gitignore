@@ -1,0 +1,16 @@
+# Ignore all build files
+/build/
+
+# Ignore all object files
+*.o
+
+# Ignore all executable files
+*
+!*.cpp
+!*.h
+!*.hpp
+!*.c
+!*.cc
+!CMakeLists.txt
+!*.md
+!*.txt
