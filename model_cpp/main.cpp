@@ -2,7 +2,6 @@
 
 #include <chrono>
 #include <cmath>
-#include <cstdint>
 #include <cstring>
 #include <iostream>
 #include <opencv2/opencv.hpp>
@@ -10,9 +9,9 @@
 #include <vector>
 
 #include "conv_layers.h"
-#include "file_loader.h"
 #include "layer_computer.h"
 #include "label.h"
+
 
 
 
